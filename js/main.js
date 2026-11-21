@@ -49,4 +49,49 @@
 
   loadInfo();
 
+  const canvas = document.querySelector("#explode-view");
+
+    const context = canvas.getContext("2d");
+
+    canvas.width = 1920;
+    canvas.height = 1080;
+
+    const frameCount = 450; //frame count, how mant individual frames
+
+    const images = []; //array element to hold all frames
+
+    //object called "buds" holds the current frame, we animate its frame property and value
+    const buds = {
+        frame: 0
+    };
+
+    for(let i = 0; i < frameCount; i++) {
+        const img = new Image();
+        img.src = `images/Rendertake${(i + 1).toString().padStart(4, '0')}.webp`;
+        images.push(img);
+    };
+
+    console.table(images);
+
+    gsap.to(buds, {
+        frame: frameCount - 1,
+        ease: "none",
+        snap: "frame",
+        scrollTrigger: {
+            trigger: "explode-view",
+            pin: true,
+            markers: true,
+            start: "top top",
+            scrub: 1
+        },
+        onUpdate: render
+    });
+
+
+    function render() {
+        context.clearRect(0,0, canvas.width, canvas.height);
+        console.log(images[buds.frame]);
+        context.drawImage(images[buds.frame], 0, 0);
+    }
+
 })();
