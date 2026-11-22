@@ -88,6 +88,65 @@ model-viewer::part(default-progress-mask) {
   max-width: 100%;
 }
 
+#xray {
+  position: relative;
+  aspect-ratio: 5/4;
+  background-image: url(../images/SpeakerRenderNormal.png);
+  background-size: cover;
+}
+
+#divisor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  aspect-ratio: 5/4;
+  background-image: url(../images/SpeakerRenderTransparent.png);
+  background-size: cover;
+  width: 50%;
+  height: 100%;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    width: 15px;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+  }
+}
+
+input[type=range] {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(100% + 20px);
+  left: -19px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 200px;
+  background: #ffffff;
+  border-color: black;
+  border: 5px;
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+  width: 25px;
+  height: 200px;
+  background: #ffffff;
+  border-color: black;
+  border: 5px;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 400px) {
   .Hotspot {
     visibility: visible;
