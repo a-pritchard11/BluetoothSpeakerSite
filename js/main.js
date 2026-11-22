@@ -19,6 +19,10 @@
       image: 'images/sparkles.svg'
     },
   ]
+    
+  
+    const divisor = document.querySelector("#divisor");
+    const slider = document.querySelector("#slider");
 
   //functions
 
@@ -46,7 +50,21 @@
       //append the image
     });
   }
+    function render() {
+        context.clearRect(0,0, canvas.width, canvas.height);
+        console.log(images[buds.frame]);
+        context.drawImage(images[buds.frame], 0, 0);
+    }
 
+        
+    function moveDivisor() {
+        divisor.style.width = `${slider.value}%`
+    }
+
+    function resetSlider() {
+        slider.value = "50%";
+    }
+    
   loadInfo();
 
   const canvas = document.querySelector("#explode-view");
@@ -88,10 +106,10 @@
     });
 
 
-    function render() {
-        context.clearRect(0,0, canvas.width, canvas.height);
-        console.log(images[buds.frame]);
-        context.drawImage(images[buds.frame], 0, 0);
-    }
+    
+
+    slider.addEventListener("input", moveDivisor);
+    window.addEventListener("load", resetSlider);
+
 
 })();
