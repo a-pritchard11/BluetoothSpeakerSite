@@ -11,8 +11,15 @@
     <title>Resn8r Product Website</title>
 </head>
 <body>
-    <div class="grid-con center-grid-con">
-      <section class="col-span-full">
+    <section class="grid-con center-grid-con">
+        <h2 class="hidden">Logo Bar</h2>
+        <div class="box col-span-full banner">
+            <img src="images/Resn8r_Logo_White.png" alt="A white version of the Resn8r logo">
+        </div>
+    </section>
+    
+    <div id="fullmodel" class="grid-con center-grid-con">
+      <section class="col-span-full m-col-start-1 m-col-end-8">
         <model-viewer src="models/Speaker.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" auto-rotate camera-orbit="128deg 65.89deg 0.7588m" field-of-view="30deg">
                <button class="Hotspot" slot="hotspot-1" data-position="0.00227399072161337m 0.07321455556521483m 0.08177171662885332m" data-normal="0m 1m 0m" data-visibility-attribute="visible">
                   <div class="HotspotAnnotation" id="hotspot-1">
@@ -26,31 +33,55 @@
                   <div class="HotspotAnnotation" id="hotspot-3">
                   </div>
               </button>
-            </model-viewer>  
-      </section> 
-    </div>
-        <div class="col-span-full">
-            <h2 class="hidden">Explode Animation</h2>
-            <canvas id="explode-view"></canvas> 
+            </model-viewer>
+        </section>
+        <div id="modelinfo" class="box col-span-full m-col-start-8 m-col-end-13 l-col-start-9 l-col-end-13">
+                <h2>Introducing...</h2>
+            <p>Our latest model of RESN8R, utilizing our brand new rectangular design. It features a sleek rectangular lid and a stainless steel frame that encases the speakers underneath. <br>
+            from top to bottom, our new model represents the quality, sleek, and smooth identity that RESN8R strives for.</p>
+            <h2>Investigate our digital model seen here. See for yourself.</h2>
         </div>
-    <div class="col-span-full">
+    </div>
+        <section class="grid-con center-grid-con">
+            <div class="box col-span-full m-col-start-1 m-col-end-5">
+                <h2 class="check">Scroll to see how our model looks both inside and out.</h2>
+            </div>
+            <div class="box col-span-full m-col-start-5 m-col-end-13">
+                <h2 class="hidden">Explode Animation</h2>
+                <canvas id="explode-view"></canvas> 
+            </div>
+    </section>
+<section class="grid-con center-grid-con">
+    <div class="col-span-full m-col-start-1 m-col-end-9">
             <h2 class="hidden">Comparison Slider</h2>
-            <div id="comparison-con">
+            <div id=" box comparison-con">
                 <div id="xray">
                     <div id="divisor"></div>
                     <input type="range" min="0" max="100" step=".2" value="50" id="slider">
                 </div>
             </div>
-            <h2>Peer Into Our World</h2>
-            <p>Harmony Pods' commitment to sustainability is another aspect that resonates with today's conscious
-                consumers. The company uses eco-friendly packaging and partners with recycling programs to minimize
-                waste. By incorporating recycled materials into their products and processes, Harmony Pods not only
-                delivers a premium audio experience but also supports environmental responsibility. Whether you're
-                listening to your favorite tunes, joining a conference call, or simply seeking a little escape from the
-                noise of the world, Harmony Pods are a reliable and eco-conscious choice that doesn't compromise on
-                quality.</p>
         </div>
     </div>
+    <div class="box col-span-full m-col-start-9 m-col-end-13">
+                <h2 class="check">Peel back the layer to view the interior of the lid.</h2>
+            </div>
+</section>
+    <section class="grid-con center-grid-con">
+        <div id="interested" class="box col-span-full">
+            <h2>Interested?</h2>
+            <p>Of course you are.</p>
+            <p>To reserve, please follow the link below.</p>
+        </div>
+        <div id="reserve" class="box col-span-full m-col-start-4 m-col-end-10">
+            <a href="#">Reserve Now</a>
+        </div>
+    </section>
+<section class="grid-con center-grid-con">
+        <h2 class="hidden">Logo Bar</h2>
+        <div class="box col-span-full banner">
+            <img src="images/Resn8r_Logo_White.png" alt="A white version of the Resn8r logo">
+        </div>
+    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>

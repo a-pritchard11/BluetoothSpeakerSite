@@ -77,7 +77,7 @@ model-viewer {
 /* Progress */
 model-viewer::part(default-progress-bar) {
   height: 30px;
-  background-color: #E89B36;
+  background-color: #000000;
 }
 
 model-viewer::part(default-progress-mask) {
@@ -145,6 +145,54 @@ input[type=range]::-moz-range-thumb {
   border-color: black;
   border: 5px;
   cursor: pointer;
+}
+
+.banner img {
+  width: 30%;
+}
+
+#modelinfo {
+  font-family: Audiowide, Arial, Helvetica, sans-serif;
+}
+
+#modelinfo h2 {
+  font-size: 40px;
+}
+
+#modelinfo p {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+#interested h2, p {
+  font-family: Audiowide, Arial, Helvetica, sans-serif;
+}
+
+#interested h2 {
+  font-size: 40px;
+  text-align: left;
+  text-decoration: underline;
+}
+
+#interested p {
+  text-align: right;
+  text-decoration: underline;
+}
+
+.check {
+  font-family: Audiowide, Arial, Helvetica, sans-serif;
+  font-size: 50px;
+}
+
+#reserve {
+  border-radius: 50px;
+}
+
+#reserve a {
+  color: #fff;
+  text-align: center;
+  font-family: Audiowide, Arial, Helvetica, sans-serif;
+  font-size: 70px;
 }
 
 @media screen and (min-width: 400px) {
