@@ -74,11 +74,10 @@
     canvas.width = 1920;
     canvas.height = 1080;
 
-    const frameCount = 450; //frame count, how mant individual frames
+    const frameCount = 450; 
 
-    const images = []; //array element to hold all frames
+    const images = []; 
 
-    //object called "buds" holds the current frame, we animate its frame property and value
     const buds = {
         frame: 0
     };
